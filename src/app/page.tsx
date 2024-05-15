@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import Image from "next/image";
-
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
-
-=======
 {/* Imports Next */}
 import Image from "next/image";
 import Link from "next/link";
@@ -17,41 +9,21 @@ import { Button } from "@/components/ui/button";
 import Categorys from "@/components/categorys";
 
 {/* Icones */}
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
 import {
   IoLogoInstagram,
   IoLogoGithub,
   IoLogoLinkedin,
-<<<<<<< HEAD
-  IoIosHome,
-  IoIosContact,
-} from "react-icons/io";
-import { IoCheckmarkDone } from "react-icons/io5";
-import { FaUser } from "react-icons/fa6";
-import { SiHyperskill } from "react-icons/si";
-import { LuSend } from "react-icons/lu";
-
-import Link from "next/link";
-
-=======
 } from "react-icons/io";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
 
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
 export default function Home() {
   return (
     <div className="p-4 space-y-4">
       {/* Avatar */}
-<<<<<<< HEAD
-      <div className="flex flex-col space-y-5 md:justify-between items-center w-full bg-[--nightBlack] rounded-xl p-3 md:w-[25%] md:fixed md:left-2 md:top-8 md:h-[90%]">
-        <Avatar className="size-28 md:size-36 border-8 border-[--metalBlack]">
-          <AvatarImage src="https://github.com/shadcn.png" />
-=======
       <div className="flex flex-col space-y-5 md:justify-between items-center w-full bg-[--nightBlack] rounded-xl p-3 md:w-[25%] md:fixed md:left-2 md:top-8 md:h-[91%]">
         <Avatar className="size-28 md:size-36 border-8 border-[--metalBlack] md:mt-3">
           <AvatarImage src="/foto.jpg" />
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <h1 className="font-bold text-[--color-white]">Pedro Gontijo Braz</h1>
@@ -126,45 +98,23 @@ export default function Home() {
 
       <div className="md:w-[74%] md:ml-[26%] space-y-3">
         {/* Home */}
-<<<<<<< HEAD
-        <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-10">
-          <div className="border w-32 rounded-full py-1.5 px-3 border-white/20">
-            <span className="flex gap-1 items-center text-xs text-[--color-white]">
-              <IoIosHome size={16} className="text-[--color-theme]" />
-              INTRODUCTION
-            </span>
-          </div>
-          <div className="text-[--color-white] font-bold text-4xl">
-            <span className="flex flex-col">
-              Specialist{" "}
-              <span className="text-[--color-theme]">Web Development</span>
-            </span>
-          </div>
-=======
         <div className="flex flex-col space-y-8 bg-[--nightBlack] rounded-xl p-8">
           <Categorys
             name="INTRODUCTION"
             title="Specialist"
             span="Web Development"
           />
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
           <div className="text-[--textColor] md:max-w-[70%]">
             <p>
               As a{" "}
               <span className="text-[--color-white] font-medium">
                 Front End Developer
               </span>
-<<<<<<< HEAD
-              , my technical expertise stands out in crafting innovative
-              solutions designed to exceed expectations and drive the success of
-              each project.
-=======
               , I excel in crafting innovative solutions that surpass
               expectations and drive project success. My focus is on creating
               dynamic, visually appealing digital experiences while prioritizing
               collaboration and communication to ensure exceptional results that
               meet both present and future digital landscape needs.
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
             </p>
           </div>
           <div className="text-[--textColor] flex gap-6">
@@ -186,26 +136,9 @@ export default function Home() {
         </div>
 
         {/* Biography */}
-<<<<<<< HEAD
-        <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-10">
-          <div className="border w-28 rounded-full py-1.5 px-3 border-white/20">
-            <span className="flex gap-1 items-center text-xs text-[--color-white]">
-              <FaUser size={12} className="text-[--color-theme]" />
-              BIOGRAPHY
-            </span>
-          </div>
-          <div className="text-[--color-white] font-bold text-4xl">
-            <span className="font-light">
-              About{" "}
-              <span className="text-[--color-theme] font-semibold">Me</span>
-            </span>
-          </div>
-          <div className="text-[--textColor] space-y-6">
-=======
         <div className="flex flex-col space-y-12 bg-[--nightBlack] rounded-xl p-8">
           <div className="text-[--textColor] space-y-6">
             <Categorys name="biography" title="About" span="Me" />
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
             <p>
               Pedro Gontijo Braz, a{" "}
               <span className="text-white font-medium">
@@ -213,11 +146,7 @@ export default function Home() {
               </span>{" "}
               passionate about technology and driven by the creation of
               innovative digital solutions. Additionally, advancing knowledge
-<<<<<<< HEAD
-              through the
-=======
               through the{" "}
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
               <span className="text-white font-medium">
                 Professional Certificate Program in Computer Science
               </span>{" "}
@@ -240,118 +169,6 @@ export default function Home() {
               valuable expertise in any professional environment.
             </p>
           </div>
-<<<<<<< HEAD
-        </div>
-
-        {/* Skills */}
-        <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-10">
-          <div className="border w-20 rounded-full py-1.5 px-3 border-white/20">
-            <span className="flex gap-1 items-center text-xs text-[--color-white]">
-              <SiHyperskill size={12} className="text-[--color-theme]" />
-              SKILLS
-            </span>
-          </div>
-          <div className="text-[--color-white] font-bold text-4xl">
-            <span className="font-light">
-              My{" "}
-              <span className="text-[--color-theme] font-semibold">Skills</span>
-            </span>
-          </div>
-          <div className="text-[--textColor] space-y-6">
-            <p>
-              Below, on the left, you&apos;ll see languages I am knowledge
-              about, and on the right, the ones I am learning:
-            </p>
-            <div className="flex flex-col space-y-2 items-center">
-              <div className="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row md:w-full md:gap-4 md:justify-center">
-                <div className="flex bg-[--metalBlack] rounded-xl gap-3 p-2 md:px-4 md:py-3 justify-center items-center">
-                  <Image
-                    src="/html5.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/css3.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/js.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/tailwind.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/react.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/nextjs.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/typescript.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                  <Image
-                    src="/nodejs.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                </div>
-                <div className="flex bg-[--metalBlack] rounded-xl gap-3 p-2 md:px-4 md:py-3 justify-center items-center">
-                  <Image
-                    src="/java.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                   <Image
-                    src="/sass.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                   <Image
-                    src="/spring.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                  />
-                   <Image
-                    src="/linux.svg"
-                    alt=""
-                    width={0}
-                    height={0}
-                    className="size-8 md:size-9 hover:translate-y-[-4px] duration-300"
-                  />
-=======
           <Separator className="bg-[--metalBlack]" />
           <div className="space-y-6">
             <Categorys name="skills" title="My" span="Skills" />
@@ -450,7 +267,6 @@ export default function Home() {
                       className="size-8 md:size-9 hover:translate-y-[-4px] duration-300"
                     />
                   </div>
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
                 </div>
               </div>
             </div>
@@ -458,24 +274,6 @@ export default function Home() {
         </div>
 
         {/* Get in touch */}
-<<<<<<< HEAD
-        <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-10">
-          <div className="border w-24 rounded-full py-1.5 px-3 border-white/20">
-            <span className="flex gap-1 items-center text-xs text-[--color-white]">
-              <IoIosContact size={14} className="text-[--color-theme]" />
-              CONTACT
-            </span>
-          </div>
-          <div className="text-[--color-white] font-bold text-4xl">
-            <span className="font-light">
-              Get in{" "}
-              <span className="text-[--color-theme] font-semibold">Touch</span>
-            </span>
-          </div>
-          <div className="text-[--textColor] space-y-6">
-            <p>Below, you can contact me via email.</p>
-            <div className="flex flex-col space-y-2">
-=======
         <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-8">
           <Categorys name="contact" title="Get in" span="Touch" />
           <p className="text-[--textColor]">
@@ -483,7 +281,6 @@ export default function Home() {
           </p>
           <div className="text-[--textColor] space-y-6">
             <div className="flex flex-col space-y-2 mx-[10%] md:mx-[30%] md:mt-4">
->>>>>>> 96ed28a (feat: add responsive mode and categorys)
               <input
                 type="text"
                 name=""
