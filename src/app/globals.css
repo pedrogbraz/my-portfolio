@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Saira", sans-serif;
+}
+
+body {
+  border: none;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--power__black);
+}
+
+:root {
+  --color-black: #000000;
+  --color-background-gray: #111011;
+  --color-white: #FFFFFF;
+  --color-theme: #A51C30;
+  --nightBlack: #212223;
+  --textColor: #999999;
+  --power__black: #18191A;
+  --metalBlack: #2D2E2F;
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 0;
+}
