@@ -1,21 +1,31 @@
-{/* Imports Next */}
+"use client";
+
+{
+  /* Imports Next */
+}
 import Image from "next/image";
 import Link from "next/link";
 
-{/* Components */}
+{
+  /* Framer Motion */
+}
+import { motion } from "framer-motion";
+
+{
+  /* Components */
+}
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import Categorys from "@/components/categorys";
 
-{/* Icones */}
-import {
-  IoLogoInstagram,
-  IoLogoGithub,
-  IoLogoLinkedin,
-} from "react-icons/io";
+{
+  /* Icones */
+}
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { IoCheckmarkDone } from "react-icons/io5";
 import { LuSend } from "react-icons/lu";
+import Languages from "@/components/languages";
 
 export default function Home() {
   return (
@@ -59,7 +69,12 @@ export default function Home() {
         <div className="flex flex-col space-y-3 w-full rounded-xl p-5 bg-[--metalBlack]">
           <span className="font-bold text-[--color-white]">Contacts</span>
           <div className="flex justify-center gap-6 w-full">
-            <div className="flex space-y-1 text-[--textColor] flex-col items-center">
+            <motion.div
+              className="flex space-y-1 text-[--textColor] flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
                 href="/"
@@ -69,8 +84,13 @@ export default function Home() {
                 </div>
               </Link>
               <span>Instagram</span>
-            </div>
-            <div className="flex space-y-1 text-[--textColor] flex-col items-center">
+            </motion.div>
+            <motion.div
+              className="flex space-y-1 text-[--textColor] flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay:0.3 }}
+            >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
                 href="/"
@@ -80,8 +100,13 @@ export default function Home() {
                 </div>
               </Link>
               <span>Github</span>
-            </div>
-            <div className="flex space-y-1 text-[--textColor] flex-col items-center">
+            </motion.div>
+            <motion.div
+              className="flex space-y-1 text-[--textColor] flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay:0.6 }}
+            >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
                 href="/"
@@ -91,7 +116,7 @@ export default function Home() {
                 </div>
               </Link>
               <span>Linkedin</span>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
@@ -105,7 +130,12 @@ export default function Home() {
             span="Web Development"
           />
           <div className="text-[--textColor] md:max-w-[70%]">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              exit={{ opacity: 0, x: 60 }}
+            >
               As a{" "}
               <span className="text-[--color-white] font-medium">
                 Front End Developer
@@ -115,31 +145,53 @@ export default function Home() {
               dynamic, visually appealing digital experiences while prioritizing
               collaboration and communication to ensure exceptional results that
               meet both present and future digital landscape needs.
-            </p>
+            </motion.p>
           </div>
           <div className="text-[--textColor] flex gap-6">
-            <span className="flex items-center gap-1.5">
+            <motion.span
+              className="flex items-center gap-1.5"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              exit={{ opacity: 0, y: 20 }}
+            >
               <IoCheckmarkDone className="text-green-400" size={18} />
               CLT/PJ/Freelancer
-            </span>
-            <span className="flex items-center gap-1.5">
+            </motion.span>
+            <motion.span
+              className="flex items-center gap-1.5"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+              exit={{ opacity: 0, y: 20 }}
+            >
               <IoCheckmarkDone className="text-green-400" size={18} />
               Available for projects
-            </span>
+            </motion.span>
           </div>
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.6 }}
+            exit={{ opacity: 0, y: 20 }}
+          >
             <Button className="p-5 md:text-base md:p-6 text-[--color-white] flex gap-1.5 items-center rounded-full bg-[--color-theme] duration-300 hover:bg-[--color-theme]">
               <LuSend size={15} />
               GET IN TOUCH
             </Button>
-          </div>
+          </motion.div>
         </div>
 
         {/* Biography */}
         <div className="flex flex-col space-y-12 bg-[--nightBlack] rounded-xl p-8">
           <div className="text-[--textColor] space-y-6">
             <Categorys name="biography" title="About" span="Me" />
-            <p>
+            <motion.p
+              initial={{ opacity: 0, x: 60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 60 }}
+              transition={{ duration: 0.3 }}
+            >
               Pedro Gontijo Braz, a{" "}
               <span className="text-white font-medium">
                 Front End Developer
@@ -155,8 +207,13 @@ export default function Home() {
               , recognized for active participation in activities and societies,
               including the renowned{" "}
               <span className="text-white font-medium">HarvardX CS50s.</span>
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -40 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
               Constantly seeking to expand knowledge in{" "}
               <span className="text-white font-medium">
                 Python, Java, C#, and .NET
@@ -167,105 +224,56 @@ export default function Home() {
               </span>
               Prepared to make significant contributions with diverse skills and
               valuable expertise in any professional environment.
-            </p>
+            </motion.p>
           </div>
           <Separator className="bg-[--metalBlack]" />
           <div className="space-y-6">
             <Categorys name="skills" title="My" span="Skills" />
             <div className="text-[--textColor] space-y-6 md:space-y-10">
-              <p>
+              <motion.p
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+              >
                 Below, on the left, you&apos;ll see languages I am knowledge
                 about, and on the right, the ones I am learning:
-              </p>
+              </motion.p>
               <div className="flex flex-col space-y-2 items-center">
                 <div className="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row md:w-full md:gap-4 md:justify-center">
                   <div className="flex bg-[--metalBlack] rounded-xl gap-3 p-2 md:px-4 md:py-3 justify-center items-center">
-                    <Image
-                      src="/html5.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/css3.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/js.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/tailwind.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/react.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/nextjs.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/typescript.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/nodejs.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
+                    {[
+                      { src: "html5.svg", alt: "Logo HTML5" },
+                      { src: "css3.svg", alt: "Logo CSS3" },
+                      { src: "js.svg", alt: "Logo JavaScript" },
+                      { src: "tailwind.svg", alt: "Logo Tailwindcss" },
+                      { src: "react.svg", alt: "Logo React" },
+                      { src: "nextjs.svg", alt: "Logo Nextjs" },
+                      { src: "typescript.svg", alt: "Logo Typescript" },
+                      { src: "nodejs.svg", alt: "Logo Nodejs" },
+                    ].map((item, index) => (
+                      <Languages
+                        key={item.src}
+                        src={item.src}
+                        alt={item.alt}
+                        delay={index * 0.3} // Incrementando o delay
+                      />
+                    ))}
                   </div>
                   <div className="flex bg-[--metalBlack] rounded-xl gap-3 p-2 md:px-4 md:py-3 justify-center items-center">
-                    <Image
-                      src="/java.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/sass.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/spring.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-10 hover:translate-y-[-4px] duration-300"
-                    />
-                    <Image
-                      src="/linux.svg"
-                      alt=""
-                      width={0}
-                      height={0}
-                      className="size-8 md:size-9 hover:translate-y-[-4px] duration-300"
-                    />
+                    {[
+                      { src: "java.svg", alt: "Logo Java" },
+                      { src: "sass.svg", alt: "Logo Sass" },
+                      { src: "spring.svg", alt: "Logo Spring Framework" },
+                      { src: "linux.svg", alt: "Logo Linux" },
+                    ].map((item, index) => (
+                      <Languages
+                        key={item.src}
+                        src={item.src}
+                        alt={item.alt}
+                        delay={(index + 8) * 0.3} // Incrementando o delay
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -276,43 +284,72 @@ export default function Home() {
         {/* Get in touch */}
         <div className="flex flex-col space-y-6 bg-[--nightBlack] rounded-xl p-8">
           <Categorys name="contact" title="Get in" span="Touch" />
-          <p className="text-[--textColor]">
+          <motion.p
+            className="text-[--textColor]"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 60 }}
+            transition={{ duration: 0.6 }}
+          >
             Below, you can contact me via email.
-          </p>
+          </motion.p>
           <div className="text-[--textColor] space-y-6">
             <div className="flex flex-col space-y-2 mx-[10%] md:mx-[30%] md:mt-4">
-              <input
+              <motion.input
                 type="text"
                 name=""
                 id=""
                 className="rounded-full bg-[--metalBlack] outline-none px-4 py-3 text-sm focus:border focus:border-[--color-theme]"
                 placeholder="Enter your name"
                 required
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
               />
-              <input
+              <motion.input
                 type="text"
                 name=""
                 id=""
                 className="rounded-full bg-[--metalBlack] outline-none px-4 py-3 text-sm focus:border focus:border-[--color-theme]"
                 placeholder="Enter your emails"
                 required
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -60 }}
+                transition={{ duration: 0.3 }}
               />
-              <input
+              <motion.input
                 type="text"
                 name=""
                 id=""
                 className="rounded-full bg-[--metalBlack] outline-none px-4 py-3 text-sm focus:border focus:border-[--color-theme]"
                 placeholder="Enter the subject"
                 required
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 60 }}
+                transition={{ duration: 0.3 }}
               />
-              <textarea
+              <motion.textarea
                 className="rounded-xl bg-[--metalBlack] resize-none h-48 outline-none px-4 py-3 text-sm focus:border focus:border-[--color-theme]"
                 placeholder="Type the message"
                 required
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
               />
-              <Button className="bg-[--metalBlack] rounded-full hover:bg-[--metalBlack] hover:text-[--color-theme] duration-300 focus:border focus:border-[--color-theme]">
-                Send
-              </Button>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 60 }}
+                transition={{ duration: 0.3, delay: 0.6 }}
+              >
+                <Button className="w-full bg-[--metalBlack] rounded-full hover:bg-[--metalBlack] hover:text-[--color-theme] duration-300 focus:border focus:border-[--color-theme]">
+                  Send
+                </Button>
+              </motion.div>
             </div>
           </div>
         </div>
