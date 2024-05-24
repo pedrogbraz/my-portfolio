@@ -77,7 +77,7 @@ export default function Home() {
             >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
-                href="/"
+                href="https://www.instagram.com/pedr0_br4z/" target="_blank"
               >
                 <div className="border border-[--textColor] rounded-full p-2 hover:border-[--color-theme] duration-300">
                   <IoLogoInstagram size={24} />
@@ -93,7 +93,7 @@ export default function Home() {
             >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
-                href="/"
+                href="https://github.com/pedrogbraz" target="_blank"
               >
                 <div className="border border-[--textColor] rounded-full p-2 hover:border-[--color-theme] duration-300">
                   <IoLogoGithub size={24} />
@@ -109,7 +109,7 @@ export default function Home() {
             >
               <Link
                 className="rounded-full hover:text-[--color-theme]"
-                href="/"
+                href="https://www.linkedin.com/in/pedro-gontijo-braz-7b6014268/" target="_blank"
               >
                 <div className="border border-[--textColor] rounded-full p-2 hover:border-[--color-theme] duration-300">
                   <IoLogoLinkedin size={24} />
