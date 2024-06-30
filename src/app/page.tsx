@@ -62,7 +62,7 @@ export default function Home() {
               <h2>Age:</h2>
             </div>
             <div className="text-[--textColor]">
-              <span>16 years</span>
+              <span>17 years</span>
             </div>
           </div>
         </div>
